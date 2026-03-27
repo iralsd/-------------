@@ -1,0 +1,130 @@
+body {
+    background: linear-gradient(135deg, #07071d, #474757);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #cbcbcb;
+}
+
+.header {
+    display: flex;
+    align-items: center;   /* выравнивание по вертикали */
+    justify-content: center; /* центр по горизонтали */
+    gap: 40px; /* расстояние между картинкой и текстом */
+    padding: 40px;
+    min-height: 100vh; 
+    flex-wrap: wrap;/* шапка на весь экран */
+}
+
+.btn {
+    padding: 10px;
+    background: #a96cc3;
+    color:#fdfdfd;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 30px;
+    width: auto; /* убери фикс 59px, это душит кнопку */
+    padding: 12px 20px;
+}
+
+.btn:hover {
+    background: #5a1249;
+    color: antiquewhite;
+    transform: scale(1.05);
+}
+
+
+
+.hero {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* центр текста и кнопки */
+    text-align: center;
+    max-width: 400px;
+    justify-content: space-around;
+}
+
+.IMG {
+    display: block;
+    margin: 0 auto;
+    /* height: 50%;  */
+    border-radius: 15px;
+    object-fit: cover;
+    filter: brightness(60%);
+    width: 50%;
+    height: auto;
+    /* transition: height 0.5s ease, filter 0.5s ease;
+    cursor: pointer; */
+}
+
+.IMG:hover {
+    width: 60%;
+    filter: brightness(100%);
+}
+
+.head-text {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.drim-text {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 150px 50px 50px 50px; 
+}
+
+.info, .facts, .work {
+    background: #474855;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: 10px;
+    padding: 20px;
+    max-width: 200px;
+}
+
+.info:hover, .facts:hover, .work:hover {
+    background: rgb(88, 69, 107);
+}
+
+/* Секция еды — отдельный “слайд” */
+.eat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    /* background: #2f2f44; */
+    min-height: 100px;
+}
+
+.eat_t {
+    padding: 150px 0 20px 0;
+    font-size: 36px;
+    display: block;      
+    margin: 0 auto;     
+    text-align: center;  
+
+}
+
+.IMGeat {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    filter: brightness(50%);
+    /* transition: transform 0.4s, filter 0.4s; */
+    margin: 10px;
+}
+
+.IMGeat:hover {
+    /* transform: scale(1.15) rotate(2deg); */
+    filter: brightness(100%);
+}
+
