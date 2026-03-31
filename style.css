@@ -2,71 +2,69 @@ body {
     background: linear-gradient(135deg, #07071d, #474757);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #cbcbcb;
+    margin: 0;
+}
+
+.top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;   
 }
 
 .header {
     display: flex;
-    align-items: center;   /* выравнивание по вертикали */
-    justify-content: center; /* центр по горизонтали */
-    gap: 40px; /* расстояние между картинкой и текстом */
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
     padding: 40px;
-    min-height: 100vh; 
-    flex-wrap: wrap;/* шапка на весь экран */
+    min-height: 100vh;
+    flex-wrap: wrap;
 }
 
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 400px;
+}
+
+
 .btn {
-    padding: 10px;
     background: #a96cc3;
-    color:#fdfdfd;
+    color: #fff;
     font-size: 15px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
-    margin: 30px;
-    width: auto; /* убери фикс 59px, это душит кнопку */
     padding: 12px 20px;
+    margin: 20px;
+    transition: 0.3s;
 }
 
 .btn:hover {
     background: #5a1249;
-    color: antiquewhite;
     transform: scale(1.05);
 }
 
 
-
-.hero {
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* центр текста и кнопки */
-    text-align: center;
-    max-width: 400px;
-    justify-content: space-around;
-}
-
 .IMG {
-    display: block;
-    margin: 0 auto;
-    /* height: 50%;  */
     border-radius: 15px;
     object-fit: cover;
     filter: brightness(60%);
-    width: 50%;
-    height: auto;
-    /* transition: height 0.5s ease, filter 0.5s ease;
-    cursor: pointer; */
+    width: 40%;
+    transition: 0.3s;
 }
 
 .IMG:hover {
-    width: 60%;
+    width: 50%;
     filter: brightness(100%);
 }
 
+
 .head-text {
     font-size: 48px;
-    margin-bottom: 10px;
 }
 
 .drim-text {
@@ -74,43 +72,49 @@ body {
     opacity: 0.8;
 }
 
+li {
+    list-style: none;
+    line-height: 1.5;
+}
+
+
 .card {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 150px 50px 50px 50px; 
+    padding: 150px 50px 50px;
+    gap: 20px;
 }
 
 .info, .facts, .work {
     background: #474855;
-    border-radius: 10px;
-    font-size: 18px;
-    margin: 10px;
+    border-radius: 15px;
     padding: 20px;
-    max-width: 200px;
+    max-width: 220px;
+    flex: 1;
+    border: 1px solid #666;
+    transition: 0.3s;
 }
 
 .info:hover, .facts:hover, .work:hover {
     background: rgb(88, 69, 107);
 }
 
-/* Секция еды — отдельный “слайд” */
+
 .eat {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
     padding: 20px;
-    /* background: #2f2f44; */
-    min-height: 100px;
+    justify-items: center;
 }
 
 .eat_t {
-    padding: 150px 0 20px 0;
+    display: block;
+    text-align: center;
     font-size: 36px;
-    display: block;      
-    margin: 0 auto;     
-    text-align: center;  
 
+    margin: 100px auto 40px;
 }
 
 .IMGeat {
@@ -119,12 +123,78 @@ body {
     object-fit: cover;
     border-radius: 15px;
     filter: brightness(50%);
-    /* transition: transform 0.4s, filter 0.4s; */
-    margin: 10px;
+    transition: 0.3s;
 }
 
 .IMGeat:hover {
-    /* transform: scale(1.15) rotate(2deg); */
+    transform: scale(1.1);
     filter: brightness(100%);
 }
 
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navi {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #cbcbcb;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.navi:hover {
+    background-color: #23234e;
+}
+
+
+.top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #cbcbcb;
+    font-size: 20px;
+}
+
+
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .eat {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact {
+    background: #2f2f44;
+    color: #fff;
+    padding: 40px 20px;
+    margin: 30px 50px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.contact a {
+    color: #afa4b4;
+    font-size: 20px;
+    text-decoration: none;
+}
