@@ -9,7 +9,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;   
+  background: linear-gradient(180deg, rgba(28, 28, 40, 0.85), rgba(28, 28, 40, 0.2));
+  z-index: 1000;  
 }
 
 .header {
@@ -18,7 +19,8 @@ body {
     justify-content: center;
     gap: 40px;
     padding: 40px;
-    min-height: 100vh;
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
     flex-wrap: wrap;
 }
 
@@ -53,14 +55,19 @@ body {
     border-radius: 15px;
     object-fit: cover;
     filter: brightness(60%);
-    width: 40%;
     transition: 0.3s;
+    width: 40%;
+    display: block;
+    max-width: 45vh;
+    max-height: 65vh;
+    object-fit: cover;
 }
 
 .IMG:hover {
-    width: 50%;
+    transform: scale(1.2);
     filter: brightness(100%);
 }
+
 
 
 .head-text {
@@ -113,13 +120,13 @@ li {
     display: block;
     text-align: center;
     font-size: 36px;
-
     margin: 100px auto 40px;
 }
 
 .IMGeat {
-    width: 250px;
-    height: 200px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
     object-fit: cover;
     border-radius: 15px;
     filter: brightness(50%);
@@ -177,6 +184,12 @@ li {
 
     .eat {
         grid-template-columns: 1fr;
+    }
+    .IMG {
+        width: 65%;
+    }
+    .head-text {
+        font-size: 32px;
     }
 }
 
